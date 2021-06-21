@@ -43,4 +43,9 @@ class JsonRepository implements IRepository
         file_put_contents($this->jsonPath, $this->serializer->serialize($questions, 'json'));
         return $question;
     }
+
+    public function supportsFormat(string $format): bool
+    {
+        return 'json' === $format;
+    }
 }

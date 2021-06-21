@@ -68,4 +68,9 @@ class CsvRepository implements IRepository
         }
         return $question;
     }
+
+    public function supportsFormat(string $format): bool
+    {
+        return 'csv' === $format;
+    }
 }

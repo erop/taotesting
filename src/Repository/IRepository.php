@@ -6,6 +6,7 @@ use App\Model\Question;
 
 interface IRepository
 {
+    public function supportsFormat(string $format): bool;
     /**
      * Returns a list of Question
      * @return Question[]
