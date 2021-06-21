@@ -1,8 +1,6 @@
 <?php
 
-
-namespace App\Model\Exception;
-
+namespace App\Exception;
 
 class EmptyChoicesException extends \Exception
 {

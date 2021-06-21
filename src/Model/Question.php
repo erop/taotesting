@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-use App\Model\Exception\EmptyChoicesException;
+use App\Exception\EmptyChoicesException;
 
 class Question
 {
@@ -42,6 +42,9 @@ class Question
         return $this->createdAt;
     }
 
+    /**
+     * @return array|Choice[]
+     */
     public function getChoices(): array
     {
         return $this->choices;

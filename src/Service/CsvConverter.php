@@ -1,16 +1,15 @@
 <?php
 
-
 namespace App\Service;
 
-
+use App\Exception\WrongDateFormatException;
 use App\Model\Choice;
 use App\Model\Question;
 
-class CsvRowConverter
+class CsvConverter
 {
 
-    public function convertRow(array $row): Question
+    public function fromCsv(array $row): Question
     {
         $text = $row[0];
         $createdAtString = $row[1];
@@ -33,5 +32,15 @@ class CsvRowConverter
             $choices[] = new Choice($text);
         }
         return $choices;
+    }
+
+    public function fromQuestion(Question $question): array
+    {
+        $text = $question->getText();
+        $createdAt = $question->getCreatedAt()->format('Y-m-d H:i:s');
+        $choices = array_map(static function (Choice $choice) {
+            return $choice->getText();
+        }, $question->getChoices());
+        return [$text, $createdAt, ...$choices];
     }
 }

@@ -1,8 +1,6 @@
 <?php
 
-
-namespace App\Service;
-
+namespace App\Exception;
 
 class WrongDateFormatException extends \Exception
 {
