@@ -8,7 +8,7 @@ interface IRepository
 {
     /**
      * Returns a list of Question
-     * @return array|Question[]
+     * @return Question[]
      */
     public function findAll(): array;
 
