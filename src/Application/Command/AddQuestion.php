@@ -14,7 +14,7 @@ class AddQuestion
         $this->repository = $repository;
     }
 
-    public function __invoke(Question $question)
+    public function __invoke(Question $question): void
     {
         $this->repository->save($question);
     }

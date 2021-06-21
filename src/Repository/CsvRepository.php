@@ -55,7 +55,7 @@ class CsvRepository implements IRepository
      */
     public function save(Question $question): Question
     {
-        $handle = \fopen($this->csvPath, 'r');
+        $handle = \fopen($this->csvPath, 'a');
         try {
             if (false === $handle) {
                 throw new FileNotAccessibleException(sprintf('Could not open file "%s" for reading', $this->csvPath));

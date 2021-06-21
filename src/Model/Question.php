@@ -3,9 +3,13 @@
 namespace App\Model;
 
 use App\Exception\EmptyChoicesException;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class Question
 {
+    /**
+     * @Assert\NotBlank()
+     */
     private string $text;
 
     /**
@@ -15,14 +19,19 @@ class Question
 
     /**
      * Choices associated to the question
-     * @var array|Choice[]
+     * @var Choice[]
+     * @Assert\Count(min=3, max=3, exactMessage="This collection should contain exactly {{ limit }} elements but has {{ count }}")
      */
     private array $choices;
 
     /**
+     *
+     * @param string $text
+     * @param \DateTimeImmutable $createdAt
+     * @param Choice[] $choices
      * @throws EmptyChoicesException
      */
-    public function __construct(string $text, \DateTimeImmutable $createdAt, array $choices)
+    public function __construct(string $text, \DateTimeImmutable $createdAt, $choices)
     {
         $this->text = $text;
         $this->createdAt = $createdAt;
@@ -43,7 +52,7 @@ class Question
     }
 
     /**
-     * @return array|Choice[]
+     * @return Choice[]
      */
     public function getChoices(): array
     {
