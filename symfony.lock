@@ -1,4 +1,7 @@
 {
+    "composer/package-versions-deprecated": {
+        "version": "1.11.99.2"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -17,6 +20,9 @@
     "doctrine/lexer": {
         "version": "1.2.1"
     },
+    "friendsofphp/proxy-manager-lts": {
+        "version": "v1.0.5"
+    },
     "guzzlehttp/guzzle": {
         "version": "7.3.0"
     },
@@ -25,6 +31,9 @@
     },
     "guzzlehttp/psr7": {
         "version": "1.8.2"
+    },
+    "laminas/laminas-code": {
+        "version": "4.4.0"
     },
     "myclabs/deep-copy": {
         "version": "1.10.2"
@@ -298,6 +307,9 @@
     },
     "symfony/property-info": {
         "version": "v5.3.1"
+    },
+    "symfony/proxy-manager-bridge": {
+        "version": "v5.3.0"
     },
     "symfony/routing": {
         "version": "5.3",
