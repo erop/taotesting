@@ -1,6 +1,30 @@
 {
+    "doctrine/annotations": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "a2759dd6123694c8d901d0ec80006e044c2e6457"
+        },
+        "files": [
+            "config/routes/annotations.yaml"
+        ]
+    },
     "doctrine/instantiator": {
         "version": "1.4.0"
+    },
+    "doctrine/lexer": {
+        "version": "1.2.1"
+    },
+    "guzzlehttp/guzzle": {
+        "version": "7.3.0"
+    },
+    "guzzlehttp/promises": {
+        "version": "1.4.1"
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.8.2"
     },
     "myclabs/deep-copy": {
         "version": "1.10.2"
@@ -64,8 +88,17 @@
     "psr/event-dispatcher": {
         "version": "1.0.0"
     },
+    "psr/http-client": {
+        "version": "1.0.1"
+    },
+    "psr/http-message": {
+        "version": "1.0.1"
+    },
     "psr/log": {
         "version": "1.1.4"
+    },
+    "ralouphie/getallheaders": {
+        "version": "3.0.3"
     },
     "sebastian/cli-parser": {
         "version": "1.0.1"
@@ -114,6 +147,21 @@
     },
     "sebastian/version": {
         "version": "3.0.2"
+    },
+    "sensio/framework-extra-bundle": {
+        "version": "5.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "5.2",
+            "ref": "fb7e19da7f013d0d422fa9bce16f5c510e27609b"
+        },
+        "files": [
+            "config/packages/sensio_framework_extra.yaml"
+        ]
+    },
+    "stichoza/google-translate-php": {
+        "version": "v4.1.4"
     },
     "symfony/browser-kit": {
         "version": "v5.3.0"
@@ -245,6 +293,12 @@
     "symfony/polyfill-php81": {
         "version": "v1.23.0"
     },
+    "symfony/property-access": {
+        "version": "v5.3.0"
+    },
+    "symfony/property-info": {
+        "version": "v5.3.1"
+    },
     "symfony/routing": {
         "version": "5.3",
         "recipe": {
@@ -260,6 +314,12 @@
     },
     "symfony/runtime": {
         "version": "v5.3.2"
+    },
+    "symfony/serializer": {
+        "version": "v5.3.2"
+    },
+    "symfony/serializer-pack": {
+        "version": "v1.0.4"
     },
     "symfony/service-contracts": {
         "version": "v2.4.0"
