@@ -8,7 +8,6 @@ use App\Model\Question;
 
 class CsvConverter
 {
-
     public function fromCsv(array $row): Question
     {
         $text = $row[0];
